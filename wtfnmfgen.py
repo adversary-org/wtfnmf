@@ -10,7 +10,7 @@ from __future__ import unicode_literals
 # ben@adversary.org
 # OpenPGP/GPG key:  0x321E4E2373590E5D
 #
-# Version:  0.1.0
+# Version:  0.2.0
 #
 # License:  WTFNMFPLv1
 #
@@ -39,7 +39,7 @@ __author__ = "Ben McGinnes <ben@adversary.org>"
 __copyright__ = "Copyright © Benjamin D. McGinnes, 2014-2016"
 __copyrighta__ = "Copyright (C) Benjamin D. McGinnes, 2014-2016"
 __license__ = "WTFNMFPLv1"
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 
 from datetime import datetime
 import sys
@@ -84,18 +84,19 @@ texta = "Copyright (C) {0} {1}".format(year3, name)
 txtu = "Copyright © {0}, {1}".format(name, year3)
 textu = "Copyright © {0} {1}".format(year3, name)
 
-if name.count("@") >= 1 is True:
-    ta = texta
-    tu = textu
-else:
-    ta = txta
-    tu = txtu
-
-boilera = """ 
+boilera1 = """ 
 This work is free.  You can redistribute it and/or modify it under the
 terms of the Do What The Fuck You Want To But It's Not My Fault Public
 License, Version 1, as published by Ben McGinnes.  See the
-COPYING.WTFNMFPLv1a.txt file for more details."""
+COPYING.WTFNMFPLv1a.txt file for more details.
+"""
+
+boilera2 = """ 
+This work is free.  You can redistribute it and/or modify it under the
+terms of the Do What The Fuck You Want To But It's Not My Fault Public
+License, Version 1, as published by Ben McGinnes.  See the
+COPYING.WTFNMFPLv1a.text file for more details.
+"""
 
 ltexta = """
 This work is free.  You can redistribute it and/or modify it under the
@@ -121,11 +122,19 @@ License, Version 1, as published by Ben McGinnes:
      with your use of the work.
 """
 
-boileru = """ 
+boileru1 = """ 
 This work is free.  You can redistribute it and/or modify it under the
 terms of the Do What The Fuck You Want To But It's Not My Fault Public
 License, Version 1, as published by Ben McGinnes.  See the
-COPYING.WTFNMFPLv1u.txt file for more details."""
+COPYING.WTFNMFPLv1u.txt file for more details.
+"""
+
+boileru2 = """ 
+This work is free.  You can redistribute it and/or modify it under the
+terms of the Do What The Fuck You Want To But It's Not My Fault Public
+License, Version 1, as published by Ben McGinnes.  See the
+COPYING.WTFNMFPLv1u.text file for more details.
+"""
 
 ltextu = """
 This work is free.  You can redistribute it and/or modify it under the
@@ -151,27 +160,50 @@ License, Version 1, as published by Ben McGinnes:
      with your use of the work.
 """
 
-afile = open("COPYING.WTFNMFPLv1a.txt", "w")
-afile.write(ta)
-afile.write("\n")
-afile.write(ltexta)
-afile.close()
+a1file = open("COPYING.WTFNMFPLv1a.txt", "w")
+a1file.write(txta)
+a1file.write("\n")
+a1file.write(ltexta)
+a1file.close()
 
-bfile = open("ascii_boilerplate.txt", "w")
-bfile.write(ta)
-bfile.write("\n")
-bfile.write(boilera)
-bfile.close()
+b1file = open("ascii_boilerplate.txt", "w")
+b1file.write(txta)
+b1file.write("\n")
+b1file.write(boilera1)
+b1file.close()
 
-ufile = open("COPYING.WTFNMFPLv1u.txt", "w")
-ufile.write(tu)
-ufile.write("\n")
-ufile.write(ltextu)
-ufile.close()
+u1file = open("COPYING.WTFNMFPLv1u.txt", "w")
+u1file.write(txtu)
+u1file.write("\n")
+u1file.write(ltextu)
+u1file.close()
 
-vfile = open("utf8_boilerplate.txt", "w")
-vfile.write(tu)
-vfile.write("\n")
-vfile.write(boileru)
-vfile.close()
+v1file = open("utf8_boilerplate.txt", "w")
+v1file.write(txtu)
+v1file.write("\n")
+v1file.write(boileru1)
+v1file.close()
 
+a2file = open("COPYING.WTFNMFPLv1a.text", "w")
+a2file.write(texta)
+a2file.write("\n")
+a2file.write(ltexta)
+a2file.close()
+
+b2file = open("ascii_boilerplate.text", "w")
+b2file.write(texta)
+b2file.write("\n")
+b2file.write(boilera2)
+b2file.close()
+
+u2file = open("COPYING.WTFNMFPLv1u.text", "w")
+u2file.write(textu)
+u2file.write("\n")
+u2file.write(ltextu)
+u2file.close()
+
+v2file = open("utf8_boilerplate.text", "w")
+v2file.write(textu)
+v2file.write("\n")
+v2file.write(boileru2)
+v2file.close()
