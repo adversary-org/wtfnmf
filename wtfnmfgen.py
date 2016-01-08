@@ -170,7 +170,7 @@ ufile.write(ltextu)
 ufile.close()
 
 vfile = open("utf8_boilerplate.txt", "w")
-vfile.write(ta)
+vfile.write(tu)
 vfile.write("\n")
 vfile.write(boileru)
 vfile.close()
