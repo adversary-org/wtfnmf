@@ -91,12 +91,16 @@ else:
     ta = txta
     tu = txtu
 
+boilera = """ 
+This work is free.  You can redistribute it and/or modify it under the
+terms of the Do What The Fuck You Want To But It's Not My Fault Public
+License, Version 1, as published by Ben McGinnes.  See the
+COPYING.WTFNMFPLv1a.txt file for more details."""
+
 ltexta = """
 This work is free.  You can redistribute it and/or modify it under the
 terms of the Do What The Fuck You Want To But It's Not My Fault Public
-License, Version 1, as published by Ben McGinnes. See
-https://github.com/adversary-org/wtfnmf
-
+License, Version 1, as published by Ben McGinnes:
 
     DO WHAT THE FUCK YOU WANT TO BUT IT'S NOT MY FAULT PUBLIC LICENSE
                     Version 1, October 2013
@@ -117,12 +121,16 @@ https://github.com/adversary-org/wtfnmf
      with your use of the work.
 """
 
+boileru = """ 
+This work is free.  You can redistribute it and/or modify it under the
+terms of the Do What The Fuck You Want To But It's Not My Fault Public
+License, Version 1, as published by Ben McGinnes.  See the
+COPYING.WTFNMFPLv1u.txt file for more details."""
+
 ltextu = """
 This work is free.  You can redistribute it and/or modify it under the
 terms of the Do What The Fuck You Want To But It's Not My Fault Public
-License, Version 1, as published by Ben McGinnes. See
-https://github.com/adversary-org/wtfnmf
-
+License, Version 1, as published by Ben McGinnes:
 
     DO WHAT THE FUCK YOU WANT TO BUT IT'S NOT MY FAULT PUBLIC LICENSE
                     Version 1, October 2013
@@ -143,15 +151,27 @@ https://github.com/adversary-org/wtfnmf
      with your use of the work.
 """
 
-afile = open("COPYING.WTFNMFPLv1.txt", "w")
+afile = open("COPYING.WTFNMFPLv1a.txt", "w")
 afile.write(ta)
 afile.write("\n")
 afile.write(ltexta)
 afile.close()
+
+bfile = open("ascii_boilerplate.txt", "w")
+bfile.write(ta)
+bfile.write("\n")
+bfile.write(boilera)
+bfile.close()
 
 ufile = open("COPYING.WTFNMFPLv1u.txt", "w")
 ufile.write(tu)
 ufile.write("\n")
 ufile.write(ltextu)
 ufile.close()
+
+vfile = open("utf8_boilerplate.txt", "w")
+vfile.write(ta)
+vfile.write("\n")
+vfile.write(boileru)
+vfile.close()
 
