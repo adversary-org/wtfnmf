@@ -82,7 +82,7 @@ else:
 txta = "Copyright (C) {0}, {1}".format(name, year3)
 texta = "Copyright (C) {0} {1}".format(year3, name)
 txtu = "Copyright © {0}, {1}".format(name, year3)
-textu = "Copyright (C) {0} {1}".format(year3, name)
+textu = "Copyright © {0} {1}".format(year3, name)
 
 if name.count("@") >= 1 is True:
     ta = texta
