@@ -27,11 +27,13 @@ must be in quotation marks to prevent the shell trying to pipe the
 command into itself:
 
 ::
+   
     wtfnmfgen.py 2015 Danger Mouse
 
 or:
 
 ::
+   
     wtfnmfgen.py 2015 "Danger Mouse <dm@superspy.example.net>"
 
 The script detects whether or not an email address is present (by the
@@ -39,11 +41,13 @@ The script detects whether or not an email address is present (by the
 So the first command would produce:
 
 ::
+   
     Copyright (C) Danger Mouse, 2015-2016
     Copyright © Danger Mouse, 2015-2016
 
 While the second command would produce:
 
 ::
+   
    Copyright (C) 2015-2016 Danger Mouse <dm@superspy.example.net>
    Copyright © 2015-2016 Danger Mouse <dm@superspy.example.net>
