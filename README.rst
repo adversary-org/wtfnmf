@@ -56,8 +56,8 @@ While the second command would produce:
 
 Either option should be fine, it's up to the end user's preference as
 to which file(s) to keep and which to delete.  The output of the
-script is always eight files; four versions of the license file and 4
-versions of the boilerplate to add to code or anything else.
+script is always eight files; four versions of the license file and
+four versions of the boilerplate to add to code or anything else.
 
 
 FAQ
